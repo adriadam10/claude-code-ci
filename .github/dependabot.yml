@@ -1,0 +1,17 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: &daily
+      interval: daily
+      time: "09:00"
+      timezone: Europe/Madrid
+    commit-message:
+      prefix: ci
+
+  - package-ecosystem: docker
+    directory: /
+    schedule: *daily
+    commit-message:
+      prefix: build
