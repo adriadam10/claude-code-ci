@@ -1,7 +1,8 @@
 # claude-code-ci
 
 Container image for CI jobs that run [Claude Code](https://code.claude.com/docs) headless
-(`claude -p`): Debian slim with `git`, `curl`, `jq` and Claude Code already installed, so
+(`claude -p`): Debian slim with `git`, `curl`, `jq`, the MariaDB client (`mariadb`, for read-only
+lookups in the database of the app) and Claude Code already installed, so
 jobs don't install them on every run.
 
 ```yaml

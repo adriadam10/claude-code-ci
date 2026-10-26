@@ -6,7 +6,7 @@ FROM debian:13-slim
 ARG CLAUDE_VERSION=latest
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends git curl ca-certificates jq \
+    && apt-get install -y --no-install-recommends git curl ca-certificates jq mariadb-client \
     && rm -rf /var/lib/apt/lists/*
 
 # Runs as root because CI runners clone and run jobs as root; the installer puts the
