@@ -3,7 +3,7 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    schedule: &daily
+    schedule:
       interval: daily
       time: "09:00"
       timezone: Europe/Madrid
@@ -12,6 +12,9 @@ updates:
 
   - package-ecosystem: docker
     directory: /
-    schedule: *daily
+    schedule:
+      interval: daily
+      time: "09:00"
+      timezone: Europe/Madrid
     commit-message:
       prefix: build
